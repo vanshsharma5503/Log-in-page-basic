@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="style_login_page.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/8f7d764fb7.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div class="bg_pic"></div>
+<div class="login_box">
+  <h1 id="title">Sign Up</h1>
+  <form class="input">
+    <div class="input.group">
+      <div class="input.field" id="namefield">
+        <i class="fa-solid fa-user fa-beat-fade" ></i>
+        <input type="text" placeholder="name"><br>
+      </div>
+      <div class="input.field"  id="numberfield">
+        <i class="fa-solid fa-phone fa-beat-fade" ></i>
+        <input type="phone number" placeholder="phone number"><br>
+      </div>
+      <div class="input.field">
+        <i class="fa-solid fa-envelope fa-beat-fade" ></i>
+        <input type="email" placeholder="Email"><br>
+      </div>
+      <div class="input.field">
+        <i class="fa-solid fa-lock fa-beat-fade"></i>
+        <input type="password" placeholder="password"><br>
+      </div>
+      <p>Lost password<a href="https://www.youtube.com/"> Click here</a></p>
+    </div>
+    <div class="btn-field">
+      <button type="button" id="signupBtn">
+        Sign up
+      </button>
+      <button type="button" id="signinBtn" class="disable">
+        Sign in
+      </button>
+    </div>
+
+  </form>
+</div>
+
+<script>
+  let signupBtn=document.getElementById("signupBtn");
+  let signinBtn=document.getElementById("signinBtn");
+  let namefield=document.getElementById("namefield");
+  let numberfield=document.getElementById("numberfield");
+  let title=document.getElementById("title");
+
+  signinBtn.onclick=function(){
+    namefield.style.maxHeight="0";
+    numberfield.style.maxHeight="0";
+    title.innerHTML="sign In";
+    signinBtn.classList.add("disable");
+    signinBtn.classList.remove("disable");
+  }
+  signupBtn.onclick=function(){
+    namefield.style.maxHeight="0";
+
+    title.innerHTML="sign In";
+    signinBtn.classList.remove("disable");
+    signinBtn.classList.add("disable");
+  }
+</script>
+
+</body>
+</html>
